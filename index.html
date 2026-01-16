@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rick and Morty API</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR FIXA -->
+  <aside class="sidebar">
+
+    <!-- AÇÕES (☰ + HOME) -->
+    <div class="sidebar-actions">
+      <button id="toggle-sidebar" class="icon-btn" title="Abrir Menu">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+
+      <button id="reset-btn" class="icon-btn" title="Todos os Personagens">
+        <!-- SVG HOME -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7" />
+          <path d="M9 22V12h6v10" />
+        </svg>
+      </button>
+    </div>
+
+    <h2>
+      Personagens
+      <span id="total-count">(0)</span>
+    </h2>
+
+    <div id="accordion"></div>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- CAMPO DE PESQUISA -->
+    <div class="search-container">
+      <div class="search-box">
+
+        <!-- ÍCONE VETORIAL -->
+        <svg class="search-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+
+        <!-- INPUT -->
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Buscar personagem..."
+          autocomplete="off"
+        />
+
+      </div>
+
+      <!-- ✅ CONTADOR DE RESULTADOS -->
+      <div id="search-count" class="search-count" style="display: none;"></div>
+    </div>
+
+    <!-- LOGO -->
+    <header class="logo-container">
+      <img src="assets/logo.png" alt="Rick and Morty">
+    </header>
+
+    <!-- CARDS -->
+    <section id="cards-container"></section>
+
+    <!-- PAGINAÇÃO -->
+    <div id="pagination"></div>
+
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal">
+    <div class="modal-content">
+      <span id="close-modal">&times;</span>
+
+      <img id="modal-image" />
+      <h2 id="modal-name"></h2>
+      <p id="modal-status"></p>
+      <p id="modal-species"></p>
+      <p id="modal-gender"></p>
+      <p id="modal-origin"></p>
+      <p id="modal-location"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
