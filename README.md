@@ -114,13 +114,13 @@ Rick and Morty API
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/luisfcdev/rick-and-morty-characters-explorer.git
 ```
 
 2. Acesse a pasta
 
 ```bash
-cd nome-do-repositorio
+cd rick-and-morty-characters-explorer
 ```
 
 3. Abra o arquivo **index.html** no navegador.
